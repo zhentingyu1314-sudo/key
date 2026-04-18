@@ -9,7 +9,7 @@ const express = require('express');
 // --- 核心配置 ---
 const CONFIG = {
     MONGO_URI: "mongodb+srv://iamnotvoidgamer_db_user:rCqPPgfHLLaEZjFU@cluster0.nxr2wxk.mongodb.net/?appName=Cluster0",
-    DISCORD_TOKEN: "MTQ5NTEwNTg3Mzg3MjE2MjkyNg.GMLut1.Wqm1r1-EPEFsf793qPCjglHNbsdxZBC9TG5IcY", 
+    DISCORD_TOKEN: "MTQ5NTEwNTg3Mzg3MjE2MjkyNg.GYGDK0.7cOZtUNYvaTwbqbquY2aaeiZW_xIphjkedlLhA", 
     CLIENT_ID: "1495105873872162926", 
     GUILD_ID: "1495093952443846666",
     ROLE_ID: "1495103236057596015",

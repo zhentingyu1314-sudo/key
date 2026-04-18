@@ -132,23 +132,29 @@ client.on('interactionCreate', async (i) => {
     }
 });
 
-// --- API ---
+// --- API 服務 ---
 const app = express();
+
+// 這裡加上一個根目錄回覆，方便檢查伺服器是否活著
+app.get('/', (req, res) => res.send("Server is running!"));
+
 app.get('/verify', async (req, res) => {
     const { key, hwid } = req.query;
     if (!key || !hwid) return res.send("invalid_params");
 
     const data = await KeyModel.findOne({ key });
-    if (!data) return res.send("invalid");
-    
+    if (!data) return res.send("invalid_key");
+
     if (!data.hwid) {
         data.hwid = hwid;
         await data.save();
         return res.send("success");
     }
-    
     return res.send(data.hwid === hwid ? "success" : "hwid_mismatch");
 });
 
-app.listen(CONFIG.PORT, () => console.log(`🚀 API 運行中，端口: ${CONFIG.PORT}`));
+// Render 會自動分配 PORT，這行很重要
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🚀 API 運行中，端口: ${PORT}`));
+
 client.login(CONFIG.DISCORD_TOKEN);

@@ -1,9 +1,9 @@
--- [[ MOD8 AUTHENTICATION LOADER ]] --
+    -- [[ MOD8 AUTHENTICATION LOADER ]] --
 local input_key = ... -- 獲取傳入的參數 (即 script_key)
 
 local player = game.Players.LocalPlayer
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-local api_url = "https://key-6wch.onrender.com/verify" -- 更新為你的 API 網址
+local api_url = "http://111.184.210.45:3000/verify" -- 更新為你的 API 網址
 
 -- 檢查 Key 是否為空
 if not input_key or input_key == "" then

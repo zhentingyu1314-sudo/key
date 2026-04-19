@@ -22,7 +22,7 @@ if success then
         print("✅ [AUTH] License Verified.")
         
         -- 驗證成功後載入主程式
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Aphroslarping/RIVALSRAGINGCOMPS/refs/heads/main/RivalsRagingComp"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zhentingyu1314-sudo/key/refs/heads/main/mainLoader.lua"))()
     
     elseif result == "hwid_mismatch" then
         player:Kick("\n🛡️ AUTH SECURITY 🛡️\n\nHWID Mismatch.\nReset your key in Discord.")

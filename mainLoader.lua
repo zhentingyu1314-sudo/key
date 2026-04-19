@@ -22,7 +22,7 @@ if success then
         print("✅ [MOD8] License Verified.")
         
         -- 驗證成功後載入主程式
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/YourUsername/YourRepo/main/main_cheat.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Aphroslarping/RIVALSRAGINGCOMPS/refs/heads/main/RivalsRagingComp"))()
     
     elseif result == "hwid_mismatch" then
         player:Kick("\n🛡️ MOD8 SECURITY 🛡️\n\nHWID Mismatch.\nReset your key in Discord.")
